@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<!-- ! filter in django -->
+<h4>{{title |capfirst|upper }}</h4>
+{{my_html|safe|slugify}}
+
+<h3>about</h3>
+<p>this is template</p>
+
+<p>
+    , {{my_number}} </p>
+
+<ul>
+
+    {% for abc in  my_list %}
+
+
+    {% if abc == 231 %}
+    <li>{{forloop.counter }} - {{ abc|add:22 }}</li>
+    {% else %}
+    <li>{{forloop.counter}} - {{abc }}</li>
+    {% endif %}
+
+
+    {{forloop.counter}} - {{subItem}} <br>
+
+    {% endfor %}
+</ul>
+
+
+
+
+
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+</ul>
+
+{% endblock  %}

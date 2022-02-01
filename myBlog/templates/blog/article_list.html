@@ -1,0 +1,13 @@
+{% block content  %}
+
+
+{% for article  in  article_list %}
+
+<h2>{{article.title}}</h2>
+<p>{{article.description}}</p>
+<p>{{article.created_by}}</p>
+
+{% endfor %}
+
+
+{% endblock  %}
